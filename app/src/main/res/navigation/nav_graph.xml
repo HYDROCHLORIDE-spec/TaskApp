@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.task_app.ui.fragments.home_fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_buyListFragment"
+            app:destination="@id/buyListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sellListFragment"
+            app:destination="@id/sellListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_callListFragment"
+            app:destination="@id/callListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyListFragment"
+        android:name="com.example.task_app.ui.fragments.buy_list.BuyListFragment"
+        android:label="fragment_buy_list"
+        tools:layout="@layout/fragment_buy_list" >
+        <action
+            android:id="@+id/action_buyListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callListFragment"
+        android:name="com.example.task_app.ui.fragments.call_list.CallListFragment"
+        android:label="fragment_call_list"
+        tools:layout="@layout/fragment_call_list" >
+        <action
+            android:id="@+id/action_callListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellListFragment"
+        android:name="com.example.task_app.ui.fragments.sell_fragment.SellListFragment"
+        android:label="fragment_sell_list"
+        tools:layout="@layout/fragment_sell_list" >
+        <action
+            android:id="@+id/action_sellListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
